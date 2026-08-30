@@ -1,2 +1,3 @@
 # Adventure-Platformer-WIP-
-TBA
+TBC
+Idea: You are a thief trying to steal the treasure that is guarded by a bunch of knights
