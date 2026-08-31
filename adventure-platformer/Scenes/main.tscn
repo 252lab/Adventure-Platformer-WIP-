@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dbywn682r6elq"]
+
+[ext_resource type="Script" uid="uid://5oifqdc7cxfw" path="res://Code/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cssop864tfpy6" path="res://Scenes/level_root.tscn" id="1_jjgbg"]
+[ext_resource type="AudioStream" uid="uid://cod1y7nhutb7n" path="res://Art/Week 4 - Cloak of Darkness STAGE 1.ogg" id="3_8gbba"]
+
+[node name="Main" type="Node2D" unique_id=1970332101]
+script = ExtResource("1_bo1nx")
+
+[node name="LevelRoot" parent="." unique_id=1210931443 instance=ExtResource("1_jjgbg")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=982680144]
+stream = ExtResource("3_8gbba")
+autoplay = true
