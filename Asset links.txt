@@ -3,3 +3,4 @@ Characters: https://bruno-farias.itch.io/sidescroller-character-pack
 Boss (may not be used): https://bruno-farias.itch.io/sidescroller-character-boss
 Items: https://clockworkraven.itch.io/raven-fantasy-icons
 Background Music: https://tallbeard.itch.io/music-loop-bundle
+Font: https://grafxkid.itch.io/at01
