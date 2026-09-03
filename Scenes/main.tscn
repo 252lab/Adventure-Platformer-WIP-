@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://dbywn682r6elq"]
+
+[ext_resource type="Script" uid="uid://5oifqdc7cxfw" path="res://Code/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cssop864tfpy6" path="res://Scenes/level_root.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://dep30syhvr4xt" path="res://Art/Images/Assets/clouds_02.png" id="3_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://ca6g1tkfgi0yb" path="res://Art/Images/Assets/clouds_01.png" id="4_hptm8"]
+[ext_resource type="Texture2D" uid="uid://dpydr05q2eyy6" path="res://Art/Images/Assets/middleground.png" id="5_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://ccaabj3x6mm41" path="res://Art/Images/Assets/light.png" id="6_6iyac"]
+[ext_resource type="Texture2D" uid="uid://br34mk5xy1gsw" path="res://Art/Images/Assets/moon.png" id="7_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://xxm4ky8yondi" path="res://Art/Images/Assets/foregound.png" id="8_jkdf5"]
+[ext_resource type="FontFile" uid="uid://0grw0b2accd1" path="res://Art/Fonts/at01.ttf" id="10_hptm8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txbhf"]
+bg_color = Color(0.33497214, 0.23098198, 0.34670782, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" unique_id=1970332101]
+script = ExtResource("1_bo1nx")
+
+[node name="LevelRoot" parent="." unique_id=1210931443 instance=ExtResource("1_jjgbg")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=982680144]
+autoplay = true
+
+[node name="Fade" type="ColorRect" parent="." unique_id=2138834277]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="StartScreen" type="CanvasLayer" parent="." unique_id=1979622549]
+unique_name_in_owner = true
+
+[node name="Background" type="TextureRect" parent="StartScreen" unique_id=404397979]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="clouds_02" type="TextureRect" parent="StartScreen/Background" unique_id=1767031306]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_ynf5e")
+
+[node name="clouds_01" type="TextureRect" parent="StartScreen/Background" unique_id=1140768753]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_hptm8")
+
+[node name="middleground" type="TextureRect" parent="StartScreen/Background" unique_id=98670173]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_d1ilt")
+
+[node name="light" type="TextureRect" parent="StartScreen/Background" unique_id=2026908586]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_6iyac")
+
+[node name="moon" type="TextureRect" parent="StartScreen/Background" unique_id=595288231]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1611.38
+offset_bottom = 713.0
+texture = ExtResource("7_fdnlq")
+
+[node name="foreground" type="TextureRect" parent="StartScreen/Background" unique_id=501746408]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_jkdf5")
+
+[node name="Label" type="Label" parent="StartScreen" unique_id=1777224655]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -339.5
+offset_right = 146.5
+offset_bottom = -48.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 120
+text = "Welcome!
+
+TBA"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StartScreen" unique_id=724659684]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = 210.0
+offset_right = 191.0
+offset_bottom = 338.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_txbhf")
+button_mask = 3
+text = "Start"
+
+[node name="EndScreen" type="CanvasLayer" parent="." unique_id=1732139964]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen" unique_id=283945810]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.07450981, 0.07450981, 0.07450981, 0.58431375)
+
+[node name="Label" type="Label" parent="EndScreen" unique_id=1083791148]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.5
+offset_top = -206.0
+offset_right = 384.5
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 120
+text = "Congratulations!
+
+You retrieved the treasure!
+
+The end."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="StartScreen/Button" to="." method="_on_button_pressed"]
