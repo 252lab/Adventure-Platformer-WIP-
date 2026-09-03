@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://dbywn682r6elq"]
+
+[ext_resource type="Script" uid="uid://5oifqdc7cxfw" path="res://Code/main.gd" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://cssop864tfpy6" path="res://Scenes/level_root.tscn" id="1_jjgbg"]
+[ext_resource type="AudioStream" path="res://Art/Week 4 - Cloak of Darkness STAGE 1.ogg" id="3_8gbba"]
+[ext_resource type="Texture2D" path="res://Art/Assets/clouds_02.png" id="4_ynf5e"]
+[ext_resource type="Texture2D" path="res://Art/Assets/clouds_01.png" id="5_hptm8"]
+[ext_resource type="Texture2D" path="res://Art/Assets/middleground.png" id="6_d1ilt"]
+[ext_resource type="Texture2D" path="res://Art/Assets/light.png" id="7_6iyac"]
+[ext_resource type="Texture2D" path="res://Art/Assets/moon.png" id="8_fdnlq"]
+[ext_resource type="Texture2D" path="res://Art/Assets/foregound.png" id="9_jkdf5"]
+[ext_resource type="FontFile" uid="uid://0grw0b2accd1" path="res://Art/Fonts/at01.ttf" id="10_hptm8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txbhf"]
+bg_color = Color(0.33497214, 0.23098198, 0.34670782, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" unique_id=1970332101]
+script = ExtResource("1_bo1nx")
+
+[node name="LevelRoot" parent="." unique_id=1210931443 instance=ExtResource("1_jjgbg")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=982680144]
+stream = ExtResource("3_8gbba")
+autoplay = true
+
+[node name="StartScreen" type="CanvasLayer" parent="." unique_id=1979622549]
+visible = false
+
+[node name="Background" type="TextureRect" parent="StartScreen" unique_id=404397979]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="clouds_01" type="TextureRect" parent="StartScreen/Background" unique_id=1140768753]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_ynf5e")
+
+[node name="clouds_02" type="TextureRect" parent="StartScreen/Background" unique_id=1767031306]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_hptm8")
+
+[node name="middleground" type="TextureRect" parent="StartScreen/Background" unique_id=98670173]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_d1ilt")
+
+[node name="light" type="TextureRect" parent="StartScreen/Background" unique_id=2026908586]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_6iyac")
+
+[node name="moon" type="TextureRect" parent="StartScreen/Background" unique_id=595288231]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 1611.38
+offset_bottom = 713.0
+texture = ExtResource("8_fdnlq")
+
+[node name="foreground" type="TextureRect" parent="StartScreen/Background" unique_id=501746408]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_jkdf5")
+
+[node name="TextEdit" type="TextEdit" parent="StartScreen" unique_id=1490055961]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -581.0
+offset_top = -314.0
+offset_right = 566.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 100
+text = "Welcome!
+
+Placeholder Text"
+wrap_mode = 1
+text_direction = 1
+
+[node name="Button" type="Button" parent="StartScreen" unique_id=724659684]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -64.0
+offset_right = 191.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_txbhf")
+button_mask = 3
+text = "Start"
+
+[node name="EndScreen" type="CanvasLayer" parent="." unique_id=1732139964]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen" unique_id=283945810]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.07450981, 0.07450981, 0.07450981, 0.58431375)
+
+[node name="TextEdit" type="TextEdit" parent="EndScreen" unique_id=1761753834]
+texture_filter = 1
+offset_left = 588.0
+offset_top = 289.0
+offset_right = 1443.0
+offset_bottom = 611.0
+theme_override_fonts/font = ExtResource("10_hptm8")
+theme_override_font_sizes/font_size = 100
+text = "Congratulations!
+
+You retrived the treasure!"
