@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cod1y7nhutb7n"
+path="res://.godot/imported/Week 4 - Cloak of Darkness STAGE 1.ogg-dd6b1870c5c518ae654f05a3bbbb21b1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Art/Audio/Week 4 - Cloak of Darkness STAGE 1.ogg"
+dest_files=["res://.godot/imported/Week 4 - Cloak of Darkness STAGE 1.ogg-dd6b1870c5c518ae654f05a3bbbb21b1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
